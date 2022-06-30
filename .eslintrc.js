@@ -5,6 +5,7 @@ module.exports = {
     node: true, // 启用node中全局变量
     browser: true, // 启用浏览器中全局变量
   },
+  plugins: ["import"], // 解决动态导入import语法报错问题 --> 实际使用eslint-plugin-import的规则解决的
   parserOptions: {
     ecmaVersion: 6,
     sourceType: "module",
@@ -12,5 +13,6 @@ module.exports = {
   rules: {
     "no-var": "error", // 不能使用 var 定义变量
     // "no-self-assign": 1
+    // "no-unused-vars": 0,
   },
 };
